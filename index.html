@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1 id="h1">Guess the number from 1 to 10</h1>
-        <input id="input"></input>
-        <button id="check" onclick="check()">check</button>
-        <p id="para">you're wrong/right</p>
-        <p id="score">Score:10</p>
-    </body>
-    <script>
-        var a=document.getElementById("input");
-        var pa=document.getElementById("para");
-        var num=Math.floor(Math.random()*10)+1;
-        var score=document.getElementById("score");
-        var totalscore=10;
-        function check(){
-            var enteredno=a.value;
-            if(num==enteredno){
-                pa.textContent="you are right";
-                alert("YOU WON");
-            }
-            else{
-                totalscore=totalscore-1;
-                score.textContent="score:"+totalscore;
-                pa.textContent="you are wrong"
-            }
-        }
-    </script>
-</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Convertor</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>CM TO INCHES </h2>
+    </div>
+         <div class="inputdiv">
+              <input type="text" id="input" placeholder="length in cm">
+    </div>
+    <div>
+        <button type="submit" onclick="convert()">convert to INCHES</button>
+    </div>
+    <div id="result">
+        <script src="index.js">
+            
+        </script>
+    </div>
+</body>
