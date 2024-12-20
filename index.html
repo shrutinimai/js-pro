@@ -1,26 +1,30 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <title>TO DO LIST</title>
+    </head>
+    <body>
+        <input id="input">
+        <button id="button" onclick="adddata()">add</button>
+        <ul id="listitems">
+            <li>hello
+            <button id="del" onclick="deleteitem(event)">delete</button>
+        </li>
+        </ul>
+    </body>
+    <script>
+        var c=document.getElementById("listitems");
+        var a=document.getElementById("input");
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Currency Convertor</title>
-</head>
-<body>
-    <div id="wrapper">
-        <h2>CM TO INCHES </h2>
-    </div>
-         <div class="inputdiv">
-              <input type="text" id="input" placeholder="length in cm">
-    </div>
-    <div>
-        <button type="submit" onclick="convert()">convert to INCHES</button>
-    </div>
-    <div id="result">
-        <script src="index.js">
-            
-        </script>
-    </div>
-</body>
+        function adddata(){
+            var lis=document.createElement("li");
+            lis.innerHTML=a.value+"<button onclick='deleteitem(event)'>delete</button>";
+             c.append(lis);
+         
+        }
+        function deleteitem(){
+             event.target.parentElement.remove();
+        }
+
+    </script>
+</html>
