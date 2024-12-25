@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>TO DO LIST</title>
-    </head>
-    <body>
-        <input id="input">
-        <button id="button" onclick="adddata()">add</button>
-        <ul id="listitems">
-            <li>hello
-            <button id="del" onclick="deleteitem(event)">delete</button>
-        </li>
-        </ul>
-    </body>
-    <script>
-        var c=document.getElementById("listitems");
-        var a=document.getElementById("input");
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+</head>
+<body>
+    <h1 style="text-align: center;">MOVIE BOOKING</h1>
+    <p>Total Booked: 0</p> 
 
-        function adddata(){
-            var lis=document.createElement("li");
-            lis.innerHTML=a.value+"<button onclick='deleteitem(event)'>delete</button>";
-             c.append(lis);
-         
-        }
-        function deleteitem(){
-             event.target.parentElement.remove();
-        }
+    <label>Username:</label>
+    <input type="text" id="userName" placeholder="Enter user name">
+    <label>Seat Number:</label>
+    <input type="number" id="seatNumber" placeholder="Enter seat number">
+    <button onclick="addBooking()">Add</button>
 
-    </script>
+    <br><br>
+    <label>Find Slot:</label>
+    <input type="number" id="findSlot" placeholder="Enter seat number">
+    <button onclick="findSlot()">Find Slot</button>
+
+    <h3>Booking Details:</h3>
+    <ul id="detailsList"></ul>  
+
+    <script src="index.js"></script>
+</body>
 </html>
